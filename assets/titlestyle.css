@@ -1,0 +1,175 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+.header
+{
+    height: 100vh;
+    width: 100%;
+    padding: 0 8%;
+    background-color: #080008;
+    position:  relative;
+}
+nav
+{
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-links
+{
+    padding: 28px 0;
+}
+.nav-links li
+{
+    display: inline-block;
+    margin: 0 15px;
+}
+.nav-links li a
+{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 0;
+    position: relative;
+}
+.nav-links li a::after
+{
+    content: '';
+    background: #0d00ff;
+    width: 0;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.25s;
+}
+.nav-links li a:hover::after
+{
+    width: 100%;
+}
+nav button {
+    width: 100px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+nav button:before {
+    content: '';
+    background: linear-gradient(45deg, 
+    #ff0000, #ff7300, #fffb00, 
+    #48ff00, #00ffd5, #002bff, 
+    #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+nav button:active {
+    color: #fff
+}
+
+nav button:active:after {
+    background: transparent;
+}
+
+nav button:hover:before {
+    opacity: 1;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+.beginning
+{
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    color: #fff;
+}
+.beginning h1
+{
+    text-align: center;
+    width: 100%;
+    background: #ff5d00;
+    border-radius: 5px;
+    padding: 10px;
+}
+.beginning p
+{
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    font-size: 10px;
+}
+.buttonList
+{
+    text-align: center;
+}
+.buttonList li
+{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.buttonList li button
+{
+    position: relative;
+    padding: 10px 15px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: #fff;
+    margin: 1em 0.8em;
+    cursor: pointer;
+}
+
+.buttonList li button::after, .buttonList li button::before
+{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    transform: scale(0.85);
+}
+
+.buttonList li button:hover::before
+{
+    top: 0;
+    transform: scale(1);
+}
+.buttonList li button:hover::after
+{
+    transform: scale(1);
+}
