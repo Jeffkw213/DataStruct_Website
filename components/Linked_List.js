@@ -55,11 +55,9 @@ class linkedlist {
     }
   }
 }
+
 export default class Linked_List extends Component {
   //props
-  data = {
-    
-  }
   render() {
     return (
       <div className='linkedlist'>

@@ -2,7 +2,7 @@
 import Title from './components/Title.js';
 import LinkedList from './components/Linked_List.js';
 import Trees from './components/Trees.js';
-import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom'
+import { BrowserRouter, Route, Routes} from 'react-router-dom'
 
 export default function App() {
 
