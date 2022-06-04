@@ -63,6 +63,8 @@ export default class Linked_List extends Component {
       <div className='linkedlist'>
         <div className='title'>        
           Linked-List
+        </div>
+        <div className='commands' >
           
         </div>
 
