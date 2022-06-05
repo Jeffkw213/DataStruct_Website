@@ -66,7 +66,9 @@ export default function Linked_List() {
     const [head, setHead] = useState(null)
     const [data, setData] = useState('')
 
-    function createNode(data) {
+    function createNode() {
+        if (data.length == 0) return
+
         const newNode = { id: uuidv4(), data, next: head }
         setNodes([...nodes, newNode])
         setHead(newNode.id)
@@ -90,14 +92,17 @@ export default function Linked_List() {
     return (
         <div className="linkedlist">
             <div className="title">Linked-List</div>
-            <input
-                type="text"
-                value={data}
-                onInput={(event) => {
-                    setData(event.target.value)
-                }}
-            />
-            <button onClick={() => createNode(data)}>Add Node</button>
+            <form>
+                <input
+                    type="text"
+                    value={data}
+                    onInput={(event) => {
+                        setData(event.target.value)
+                    }}
+                    required={true}
+                />
+                <button onClick={() => createNode()}>Add Node</button>
+            </form>
 
             <div> HEAD: {head && head} </div>
             <div className="nodeContainer">
