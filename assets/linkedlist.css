@@ -1,0 +1,10 @@
+.nodeContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+.nodeContainer>* {
+  max-width: 300px;
+}
